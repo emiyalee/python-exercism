@@ -8,11 +8,12 @@ of a module and its functions and/or classes.
 """
 
 
-#TODO: define the 'EXPECTED_BAKE_TIME' constant.
+# TODO: define the 'EXPECTED_BAKE_TIME' constant.
 EXPECTED_BAKE_TIME = 40
 
-#TODO: Remove 'pass' and complete the 'bake_time_remaining()' function below.
-def bake_time_remaining(elapsed_bake_time: int)->int:
+
+# TODO: Remove 'pass' and complete the 'bake_time_remaining()' function below.
+def bake_time_remaining(elapsed_bake_time: int) -> int:
     """Calculate the bake time remaining.
 
     :param elapsed_bake_time: int - baking time already elapsed.
@@ -25,16 +26,24 @@ def bake_time_remaining(elapsed_bake_time: int)->int:
 
     return EXPECTED_BAKE_TIME - elapsed_bake_time
 
-PREPARATION_TIME = 40
-#TODO: Define the 'preparation_time_in_minutes()' function below.
+
+# TODO: Define the 'preparation_time_in_minutes()' function below.
 # You might also consider using 'PREPARATION_TIME' here, if you have it defined.
-def preparation_time_in_minutes():
-    return PREPARATION_TIME
+def preparation_time_in_minutes(preparation_time: int) -> int:
+    """_summary_
+
+    Args:
+        preparation_time (int): _description_
+
+    Returns:
+        int: _description_
+    """
+    return preparation_time * 2
 
 
-#TODO: define the 'elapsed_time_in_minutes()' function below.
+# TODO: define the 'elapsed_time_in_minutes()' function below.
 # Remember to add a docstring (you can copy and then alter the one from bake_time_remaining.)
-def elapsed_time_in_minutes():
+def elapsed_time_in_minutes(elapsed_bake_time, preparation_time: int) -> int:
     """Calculate the bake time remaining.
 
     :param elapsed_bake_time: int - baking time already elapsed.
@@ -44,3 +53,4 @@ def elapsed_time_in_minutes():
     an argument and returns how many minutes the lasagna still needs to bake
     based on the `EXPECTED_BAKE_TIME`.
     """
+    return preparation_time + preparation_time_in_minutes(elapsed_bake_time)
