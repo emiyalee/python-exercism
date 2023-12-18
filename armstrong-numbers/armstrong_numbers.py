@@ -5,4 +5,3 @@ def is_armstrong_number(number):
         s += int(c) ** a
 
     return s == number
-
